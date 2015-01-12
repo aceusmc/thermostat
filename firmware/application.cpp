@@ -196,16 +196,6 @@ void setupMatrix(Adafruit_8x8matrix m) {
 
 /* This function is called once at start up ----------------------------------*/
 void setup() {
-    //Setup the Tinker application here
-    pinMode(led, OUTPUT); //flash LED and pin D7
-
-    //Register all the Tinker functions
-    //Spark.function("digitalread", tinkerDigitalRead);
-    //Spark.function("digitalwrite", tinkerDigitalWrite);
-
-    //Spark.function("analogread", tinkerAnalogRead);
-    //Spark.function("analogwrite", tinkerAnalogWrite);
-
     Wire.begin();
 
     matrix1.begin(0x70);
@@ -237,13 +227,7 @@ void setup() {
 
 /*------------- loops forever --------------------------------------------*/
 void loop() {
-    //This will run in a loop
-    //digitalWrite(led, HIGH);   // Turn ON the LED
-    //delay(1000);               // Wait for 1000mS = 1 second
-    //digitalWrite(led, LOW);    // Turn OFF the LED
-    //delay(1000);               // Wait for 1 second
 
-    
 static int wait = 0;
 
     if (!wait) {
